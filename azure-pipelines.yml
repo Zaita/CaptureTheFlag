@@ -18,15 +18,6 @@ steps:
       # Write your commands here
       
       terraform init
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'Zaita.io - Dev(29f93ffb-32dc-48bc-977a-346d91c5f512)'
-    scriptType: 'bash'
-    scriptLocation: 'scriptPath'
-    scriptPath: '/test.sh'
-  displayName: 'Run a one-line script'
+      terraform plan
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
