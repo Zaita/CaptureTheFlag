@@ -4,13 +4,20 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- main
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
 - script: echo Hello, world!
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      terraform init
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'Zaita.io - Dev(29f93ffb-32dc-48bc-977a-346d91c5f512)'
